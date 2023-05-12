@@ -1,0 +1,186 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.brand-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100vw;
+    height: 100vh
+}
+
+.brand-container .hyperate-logo {
+    width: 60px;
+    height: 60px;
+    margin-left: calc(-60px - 0.5rem)
+}
+
+.brand-container .heartrate {
+    position: absolute;
+    left: calc(50% + 1rem)
+}
+
+.container-wrapper {
+    background: transparent;
+    color: #ebebeb;
+    width: 100vw;
+    height: 100vh
+}
+
+.container-wrapper .heartrate {
+    margin-left: 70px;
+    margin-top: 0;
+    position: absolute
+}
+
+.container-wrapper .pulsing-wrapper {
+    position: absolute
+}
+
+.container-wrapper .pulsingheart {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    top: 5px
+}
+
+.container-wrapper .pulsingheart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(.85)
+    }
+
+    20% {
+        transform: scale(.87)
+    }
+
+    30% {
+        transform: scale(.85)
+    }
+
+    40% {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(.85)
+    }
+}
+
+.pulsingheart:before,
+.pulsingheart:after {
+    position: absolute;
+    content: "";
+    left: 30px;
+    top: 0;
+    width: 30px;
+    height: 48px;
+    background: #d31d45;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%
+}
+
+.position {
+    position: absolute;
+    left: 45%;
+    top: 45%
+}
+
+.animation-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: #fff
+}
+
+.animation-position .animation img,
+.animation-position .animation video {
+    width: 300px;
+    height: 300px
+}
+
+#svg.horizontal {
+    margin-right: .5rem
+}
+
+.burned-calories-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh
+}
+
+.vertical.burned-calories-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    text-align: center
+}
+
+#highlights-admin {
+    padding: 1rem;
+    background: black;
+    color: #ebebeb;
+    width: calc(100% - 2rem)
+}
+
+#highlights-admin h1 {
+    padding: 0;
+    margin: 0
+}
+
+#highlights-admin .highlights {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem
+}
+
+#highlights-admin .highlights .highlight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    padding: 1rem
+}
+
+#highlights-admin .highlights .highlight:hover {
+    background-color: #d31d45
+}
+
+#highlights-admin .highlights .highlight .actions {
+    cursor: pointer
+}
+
+#highlights-admin .highlights .highlight video {
+    width: 200px
+}
+
+#highlights-admin .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+    cursor: pointer
+}
